@@ -746,7 +746,7 @@ int main(int argc, char ** argv) {
                 if (buffer.length() > 1) {
                     // append input suffix if any
                     if (!params.input_suffix.empty()) {
-                        LOG("appending input suffix: '%s'\n", params.input_suffix.c_str());
+                        LOG("appending the input suffix: '%s'\n", params.input_suffix.c_str());
                         printf("%s", params.input_suffix.c_str());
                     }
 
@@ -775,7 +775,7 @@ int main(int argc, char ** argv) {
 
                     // instruct mode: insert response suffix
                     if (params.instruct) {
-                        LOG("inserting instruction suffix\n");
+                        LOG("inserting instruction suffix: %s\n", params.instruct);
                         embd_inp.insert(embd_inp.end(), inp_sfx.begin(), inp_sfx.end());
                     }
 
